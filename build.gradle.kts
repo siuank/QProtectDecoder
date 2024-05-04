@@ -26,12 +26,11 @@ dependencies {
     implementation("org.ow2.asm:asm-util:9.6")
     implementation("org.ow2.asm:asm-analysis:9.6")
     // logBack
-    implementation("ch.qos.logback:logback-classic:1.4.5")
-    implementation("ch.qos.logback:logback-core:1.4.5")
+    implementation("ch.qos.logback:logback-classic:1.4.14")
+    implementation("ch.qos.logback:logback-core:1.4.14")
 
     // cli
     implementation("info.picocli:picocli:4.6.3")
-
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.9.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.0")

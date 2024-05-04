@@ -56,11 +56,11 @@ public class QPIndyCleaner {
         MethodInsnNode insnNode;
         switch(callFlag) {
             case 0: // call -> invoke static
-                logger.info("static call: {}#{} !{}", className, methodName, descriptor);
+//                logger.info("static call: {}#{} !{}", className, methodName, descriptor);
                 insnNode = new MethodInsnNode(INVOKESTATIC, className, methodName, descriptor, false);
                 break;
             case 1: // call -> invoke virtual
-                 logger.info("call: {}#{} !{}", className, methodName, descriptor);
+//                 logger.info("call: {}#{} !{}", className, methodName, descriptor);
                 insnNode = new MethodInsnNode(INVOKEVIRTUAL, className, methodName, descriptor, false);
                 break;
             default:
@@ -77,9 +77,5 @@ public class QPIndyCleaner {
             decryptedChars[i] = (char) (encryptedChars[i] ^ key1[i % key1.length] ^ key2[i % key2.length]);
         }
         return decryptedChars;
-    }
-
-    static {
-//        InvokeDynamicInsnNode
     }
 }

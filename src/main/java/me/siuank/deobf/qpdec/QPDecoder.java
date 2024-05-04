@@ -87,9 +87,11 @@ public class QPDecoder implements Callable<Integer> {
 
     public static void acceptClass(ClassNode node) {
         node.methods.forEach(QPDecoder::acceptMethod);
+        QPFlowRemover.removeFlow(node);
     }
 
     public static void acceptMethod(MethodNode node) {
         QPIndyCleaner.cleanInvokeDynamicCall(node);
+        QPStringDecrypter.runDecryptLogic(node);
     }
 }
